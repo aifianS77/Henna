@@ -66,7 +66,7 @@ class App {
 
   private setupGallery(): void {
     // Render gallery from public/images folder
-    galleryService.renderGallery('.image-gallery');
+    galleryService.renderGallery('image-gallery');
     console.log(`✅ Gallery loaded: ${galleryService.getTotalImages()} images`);
   }
 
