@@ -75,7 +75,8 @@ class App {
     (window as any).showBookingModal = () => modalManager.open('booking');
     (window as any).showLoginModal = () => {
       // Redirect to admin login page
-      window.location.href = '/admin.html';
+      const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
+      window.location.href = `${basePath}/admin.html`;
     };
     (window as any).closeModal = (modalId: string) => modalManager.close(modalId as any);
     (window as any).logout = () => {
