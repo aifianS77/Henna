@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linai Henna - Exquisite Henna Artistry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" crossorigin src="/Henna/assets/index-CGclH62A.js"></script>
+  <link rel="stylesheet" crossorigin href="/Henna/assets/index-BkP7USA2.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-spa text-3xl" style="color: #be123c;"></i>
+                    <span class="font-playfair text-2xl font-bold text-gray-800">Linai Henna</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700" style="--hover-color: #be123c;">Home</a>
+                    <a href="#gallery" class="nav-link text-gray-700">Gallery</a>
+                    <a href="#services" class="nav-link text-gray-700">Services</a>
+                    <a href="#testimonials" class="nav-link text-gray-700">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="showBookingModal()" class="btn-primary text-white px-6 py-2 rounded-full">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-20 henna-pattern">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-6">
+                    <h1 class="font-playfair text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
+                        Exquisite Henna
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-rose-800">
+                            Artistry
+                        </span>
+                    </h1>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Transform your special moments with intricate, beautiful henna designs that celebrate tradition and elegance. From weddings to festivals, let art adorn your story.
+                    </p>
+                    <div class="flex gap-4">
+                        <button onclick="showBookingModal()" class="btn-primary text-white px-8 py-3 rounded-full font-semibold">
+                            Book Appointment
+                        </button>
+                        <a href="#gallery" style="border-color: #be123c; color: #be123c;" class="border-2 px-8 py-3 rounded-full font-semibold hover:bg-rose-50 transition">
+                            View Gallery
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 pt-4">
+                        <a href="https://instagram.com/linai.henna" target="_blank" style="color: #be123c;" class="hover:opacity-80 transition">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                        <div class="text-sm text-gray-600">
+                            <span class="font-semibold">Follow us</span> @linai.henna
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute inset-0 rounded-3xl transform rotate-6" style="background: linear-gradient(to bottom right, #fb7185, #be123c);"></div>
+                        <img src="https://images.unsplash.com/photo-1623217509141-6f735087b50c?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Henna Design" 
+                             class="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="stat-number" id="happyCustomers">500+</div>
+                    <p class="text-gray-600 mt-2">Happy Customers</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">50+</div>
+                    <p class="text-gray-600 mt-2">Design Styles</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">5+</div>
+                    <p class="text-gray-600 mt-2">Years Experience</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">4.9★</div>
+                    <p class="text-gray-600 mt-2">Customer Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Our Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Browse through our collection of stunning henna designs</p>
+            </div>
+            <div class="image-gallery">
+                <!-- First row - slides right -->
+                <div class="gallery-track" id="gallery-row-1">
+                    <!-- Images will be loaded dynamically and duplicated for infinite effect -->
+                </div>
+                
+                <!-- Second row - slides right -->
+                <div class="gallery-track" id="gallery-row-2" style="margin-top: 1.5rem;">
+                    <!-- Images will be loaded dynamically and duplicated for infinite effect -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Professional henna artistry for every occasion</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="service-icon">
+                        <i class="fas fa-ring text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Bridal Henna</h3>
+                    <p class="text-gray-600 mb-4">Intricate, full-hand and feet designs perfect for your special day</p>
+                    <div class="price-tag">From RM150</div>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Party Henna</h3>
+                    <p class="text-gray-600 mb-4">Beautiful designs for celebrations, festivals, and gatherings</p>
+                    <div class="price-tag">From RM50</div>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold text-gray-800 mb-3">Event Henna</h3>
+                    <p class="text-gray-600 mb-4">Professional henna services for corporate and private events</p>
+                    <div class="price-tag">Custom Quote</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Read testimonials from our satisfied customers</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Ahmed&background=667eea&color=fff" 
+                             alt="Sarah" 
+                             class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Ahmed</h4>
+                            <div class="text-yellow-500">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Absolutely stunning work! The bridal henna was everything I dreamed of. Linai's attention to detail is incredible. Highly recommend!"</p>
+                </div>
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://ui-avatars.com/api/?name=Priya+Patel&background=764ba2&color=fff" 
+                             alt="Priya" 
+                             class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Priya Patel</h4>
+                            <div class="text-yellow-500">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Professional, creative, and so talented! The designs lasted beautifully and everyone at my wedding couldn't stop complimenting them."</p>
+                </div>
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://ui-avatars.com/api/?name=Maya+Khan&background=667eea&color=fff" 
+                             alt="Maya" 
+                             class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Maya Khan</h4>
+                            <div class="text-yellow-500">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Best henna artist in town! The booking system made it so easy to schedule. Can't wait for my next appointment!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                    <p class="text-gray-600">Have questions? We'd love to hear from you</p>
+                </div>
+                <div class="p-10 rounded-2xl shadow-xl" style="background: linear-gradient(to bottom right, #fecdd3, #faf8f5);">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full text-white py-4 rounded-lg font-semibold text-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-playfair text-2xl font-bold mb-4">Linai Henna</h3>
+                    <p style="color: #fecdd3;">Exquisite henna artistry for your special moments</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" style="color: #fecdd3;" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#gallery" style="color: #fecdd3;" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="#services" style="color: #fecdd3;" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#testimonials" style="color: #fecdd3;" class="hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/linai.henna" target="_blank" class="text-2xl hover:opacity-80 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:opacity-80 transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:opacity-80 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 text-center" style="border-top: 1px solid #fb7185; color: #fecdd3;">
+                <p>&copy; 2026 Linai Henna. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="gradient-bg text-white p-8 rounded-t-2xl">
+                <span class="close" onclick="closeModal('bookingModal')">&times;</span>
+                <h2 class="font-playfair text-3xl font-bold">Book Your Appointment</h2>
+                <p class="text-purple-100 mt-2">Fill in your details and we'll get back to you shortly</p>
+            </div>
+            <div class="p-8">
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Full Name *</label>
+                            <input type="text" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone *</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Service Type *</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                                <option value="">Select a service</option>
+                                <option value="bridal-150">Bridal Henna - RM150</option>
+                                <option value="party-50">Party Henna - RM50</option>
+                                <option value="event">Event Henna - Custom Quote</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Preferred Date *</label>
+                            <input type="date" name="date" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Preferred Time *</label>
+                            <input type="time" name="time" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Additional Details</label>
+                        <textarea name="details" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="Tell us more about your requirements..."></textarea>
+                    </div>
+                    <div id="priceDisplay" class="hidden bg-purple-50 p-4 rounded-lg">
+                        <p class="text-gray-700">Total Amount: <span class="text-2xl font-bold text-purple-600" id="totalAmount">RM0</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button type="submit" class="flex-1 btn-primary text-white py-4 rounded-lg font-semibold text-lg">
+                            <i class="fas fa-credit-card mr-2"></i> Proceed to Payment
+                        </button>
+                        <button type="button" onclick="closeModal('bookingModal')" class="px-8 py-4 border-2 border-gray-300 rounded-lg font-semibold hover:bg-gray-50">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="gradient-bg text-white p-8 rounded-t-2xl">
+                <span class="close" onclick="closeModal('paymentModal')">&times;</span>
+                <h2 class="font-playfair text-3xl font-bold">Complete Your Payment</h2>
+                <p class="text-purple-100 mt-2">Secure payment processing</p>
+            </div>
+            <div class="p-8">
+                <form id="paymentForm" class="space-y-6">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-xl text-white">
+                        <p class="text-sm opacity-80">Amount to Pay</p>
+                        <p class="text-4xl font-bold mt-2" id="paymentAmount">RM150.00</p>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Card Number *</label>
+                        <input type="text" name="cardNumber" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 rounded-lg border border-gray-300" maxlength="19" required>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Expiry Date *</label>
+                            <input type="text" placeholder="MM/YY" class="w-full px-4 py-3 rounded-lg border border-gray-300" maxlength="5" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">CVV *</label>
+                            <input type="text" placeholder="123" class="w-full px-4 py-3 rounded-lg border border-gray-300" maxlength="3" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Cardholder Name *</label>
+                        <input type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <button type="submit" class="flex-1 btn-primary text-white py-4 rounded-lg font-semibold text-lg">
+                            <i class="fas fa-lock mr-2"></i> Pay Now
+                        </button>
+                        <button type="button" onclick="closeModal('paymentModal')" class="px-8 py-4 border-2 border-gray-300 rounded-lg font-semibold hover:bg-gray-50">
+                            Cancel
+                        </button>
+                    </div>
+                    <p class="text-center text-sm text-gray-500">
+                        <i class="fas fa-shield-alt mr-1"></i> Your payment is secure and encrypted
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content max-w-md">
+            <div class="gradient-bg text-white p-8 rounded-t-2xl">
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                <h2 class="font-playfair text-3xl font-bold">Admin Login</h2>
+                <p class="text-purple-100 mt-2">Access your dashboard</p>
+            </div>
+            <div class="p-8">
+                <form id="loginForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="loginEmail" value="admin@linaihenna.com" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Password</label>
+                        <input type="password" id="loginPassword" value="admin123" class="w-full px-4 py-3 rounded-lg border border-gray-300" required>
+                    </div>
+                    <button type="submit" class="w-full btn-primary text-white py-4 rounded-lg font-semibold text-lg">
+                        <i class="fas fa-sign-in-alt mr-2"></i> Login
+                    </button>
+                    <p class="text-sm text-gray-500 text-center">Demo credentials already filled</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close text-white text-5xl absolute top-4 right-8 z-10" onclick="closeModal('imageModal')">&times;</span>
+        
+        <!-- Previous Button -->
+        <button id="prevImage" class="absolute left-8 top-1/2 transform -translate-y-1/2 z-10 text-white text-5xl hover:opacity-80 transition" style="background: rgba(190, 18, 60, 0.7); width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <!-- Next Button -->
+        <button id="nextImage" class="absolute right-8 top-1/2 transform -translate-y-1/2 z-10 text-white text-5xl hover:opacity-80 transition" style="background: rgba(190, 18, 60, 0.7); width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="flex items-center justify-center h-full p-4">
+            <img id="modalImage" src="" class="max-w-full max-h-full rounded-2xl shadow-2xl">
+        </div>
+        
+        <!-- Image Counter -->
+        <div id="imageCounter" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-lg font-semibold" style="background: rgba(190, 18, 60, 0.8); padding: 0.5rem 1.5rem; border-radius: 50px;">
+            <span id="currentImageNum">1</span> / <span id="totalImagesNum">10</span>
+        </div>
+    </div>
+
+    <!-- Dashboard (Hidden by default) -->
+    <div id="dashboard" class="hidden">
+        <div class="flex">
+            <!-- Sidebar -->
+            <div class="dashboard-sidebar w-64 p-6 text-white">
+                <div class="mb-8">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <i class="fas fa-spa text-3xl"></i>
+                        <span class="font-playfair text-2xl font-bold">Linai Henna</span>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                        <p class="text-sm opacity-80">Logged in as</p>
+                        <p class="font-semibold">Admin</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a href="#" class="dashboard-nav-item block px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition" onclick="showDashboardSection('overview')">
+                        <i class="fas fa-chart-line mr-3"></i> Overview
+                    </a>
+                    <a href="#" class="dashboard-nav-item block px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition" onclick="showDashboardSection('bookings')">
+                        <i class="fas fa-calendar-alt mr-3"></i> Bookings
+                    </a>
+                    <a href="#" class="dashboard-nav-item block px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition" onclick="showDashboardSection('receipts')">
+                        <i class="fas fa-receipt mr-3"></i> Receipts
+                    </a>
+                    <a href="#" class="dashboard-nav-item block px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition" onclick="showDashboardSection('customers')">
+                        <i class="fas fa-users mr-3"></i> Customers
+                    </a>
+                    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition mt-8" onclick="logout()">
+                        <i class="fas fa-sign-out-alt mr-3"></i> Logout
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 bg-gray-50 p-8 overflow-y-auto" style="height: 100vh;">
+                <!-- Overview Section -->
+                <div id="overview-section" class="dashboard-section">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-8">Dashboard Overview</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                        <div class="dashboard-card">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Total Revenue</p>
+                                    <p class="text-3xl font-bold stat-number" id="totalRevenue">RM0</p>
+                                </div>
+                                <i class="fas fa-dollar-sign text-4xl opacity-20" style="color: #be123c;"></i>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Total Bookings</p>
+                                    <p class="text-3xl font-bold text-blue-600" id="totalBookings">0</p>
+                                </div>
+                                <i class="fas fa-calendar-check text-4xl text-blue-600 opacity-20"></i>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Paid Customers</p>
+                                    <p class="text-3xl font-bold text-green-600" id="paidCustomers">0</p>
+                                </div>
+                                <i class="fas fa-user-check text-4xl text-green-600 opacity-20"></i>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-gray-500 text-sm">This Month</p>
+                                    <p class="text-3xl font-bold stat-number" id="monthRevenue">RM0</p>
+                                </div>
+                                <i class="fas fa-chart-line text-4xl opacity-20" style="color: #e11d48;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="dashboard-card">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Recent Bookings</h3>
+                            <div class="space-y-3" id="recentBookingsList">
+                                <p class="text-gray-500 text-center py-8">No bookings yet</p>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Revenue Chart</h3>
+                            <canvas id="revenueChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bookings Section -->
+                <div id="bookings-section" class="dashboard-section hidden">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-8">All Bookings</h1>
+                    <div class="dashboard-card">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b-2 border-gray-200">
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">ID</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Customer</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Service</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Date</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Amount</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bookingsTable">
+                                    <tr>
+                                        <td colspan="6" class="text-center py-8 text-gray-500">No bookings yet</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Receipts Section -->
+                <div id="receipts-section" class="dashboard-section hidden">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-8">Payment Receipts</h1>
+                    <div class="dashboard-card">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b-2 border-gray-200">
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Receipt #</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Customer</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Date</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Amount</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Method</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="receiptsTable">
+                                    <tr>
+                                        <td colspan="6" class="text-center py-8 text-gray-500">No receipts yet</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customers Section -->
+                <div id="customers-section" class="dashboard-section hidden">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-8">Customer List</h1>
+                    <div class="dashboard-card">
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b-2 border-gray-200">
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Name</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Email</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Phone</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Total Spent</th>
+                                        <th class="text-left py-3 px-4 text-gray-700 font-semibold">Bookings</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="customersTable">
+                                    <tr>
+                                        <td colspan="5" class="text-center py-8 text-gray-500">No customers yet</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle text-2xl mr-3"></i>
+            <span id="toastMessage">Success!</span>
+        </div>
+    </div>
+</body>
+</html>
