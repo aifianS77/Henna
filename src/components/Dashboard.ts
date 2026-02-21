@@ -4,8 +4,8 @@ import { storageService } from '@/services/storage.service';
 import { formatCurrency, formatDate } from '@/utils/helpers';
 
 class DashboardManager {
-  private isLoggedIn: boolean = false;
-  private currentSection: DashboardSection = 'overview';
+  //private isLoggedIn: boolean = false;
+  //private _currentSection: DashboardSection = 'overview';
 
   init(): void {
     this.setupNavigation();
@@ -24,7 +24,7 @@ class DashboardManager {
   }
 
   showSection(section: DashboardSection): void {
-    this.currentSection = section;
+    //this._currentSection = section;
     
     // Hide all sections
     document.querySelectorAll('.dashboard-section').forEach(s => {
@@ -191,7 +191,7 @@ class DashboardManager {
   }
 
   login(): void {
-    this.isLoggedIn = true;
+    //this.isLoggedIn = true;
     
     // Hide ALL main website content
     document.querySelectorAll('body > *:not(#dashboard):not(#toast)').forEach(el => {
@@ -210,7 +210,7 @@ class DashboardManager {
   }
 
   logout(): void {
-    this.isLoggedIn = false;
+    //this.isLoggedIn = false;
     
     // Clear session
     sessionStorage.removeItem('adminLoggedIn');

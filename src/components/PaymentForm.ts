@@ -61,7 +61,11 @@ class PaymentForm {
     if (!this.form) return;
 
     const formData = new FormData(this.form);
-    const cardNumber = (formData.get('cardNumber') as string || this.form.querySelector('input[placeholder*="1234"]')?.value || '').replace(/\s/g, '');
+    const cardInput = this.form.querySelector('input[placeholder*="1234"]') as HTMLInputElement | null;
+    const cardNumber = (
+      (formData.get('cardNumber') as string) || 
+      cardInput?.value 
+      || '').replace(/\s/g, '');
     const cardLast4 = getCardLast4(cardNumber);
 
     // Validate card details
@@ -76,7 +80,8 @@ class PaymentForm {
     setTimeout(() => {
       try {
         // Process payment and create receipt
-        const { receipt, customer } = bookingService.processPayment(booking, cardLast4);
+        // old  const { receipt, customer } = bookingService.processPayment(booking, cardLast4);
+        bookingService.processPayment(booking, cardLast4);
 
         // Update dashboard
         dashboardManager.updateStats();

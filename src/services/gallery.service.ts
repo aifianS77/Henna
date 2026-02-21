@@ -39,7 +39,7 @@ export class GalleryService {
     return this.images.length;
   }
 
-  renderGallery(containerId: string): void {
+  renderGallery(_containerId: string): void {
     // For infinite carousel, we'll render into two separate rows
     this.renderCarouselRow('gallery-row-1', 0, 5);  // First 5 images
     this.renderCarouselRow('gallery-row-2', 5, 10); // Last 5 images
