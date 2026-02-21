@@ -24,7 +24,8 @@ export class GalleryService {
 
   private loadImages(): void {
     // Build image paths
-    this.images = this.imageFiles.map(filename => `/images/${filename}`);
+    const basePath = window.location.pathname.includes('/Henna/') ? '/Henna' : '';
+    this.images = this.imageFiles.map(filename => `${basePath}/images/${filename}`);
   }
 
   getAllImages(): string[] {
